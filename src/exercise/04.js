@@ -54,10 +54,9 @@ function Game() {
   const winner = calculateWinner(currentSquares)
   const status = calculateStatus(winner, currentSquares, nextValue)
 
-  console.log({currentSquares, nextValue, winner, status})
-
   function restart() {
     setHistory([Array(9).fill(null)])
+    setCurrentStep(0)
   }
 
   const handleSquareSelect = square => {
